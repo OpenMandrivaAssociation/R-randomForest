@@ -9,10 +9,9 @@ Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_4.6-6.tar.gz
-Requires:         R-stats 
-Requires:         R-RColorBrewer R-MASS 
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-stats
-BuildRequires:    R-RColorBrewer R-MASS 
+Requires:         R-stats R-RColorBrewer R-MASS
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex
+BuildRequires:    R-stats R-RColorBrewer R-MASS
 
 %description
 Classification and regression based on a forest of trees using random
