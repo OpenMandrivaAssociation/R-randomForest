@@ -9,9 +9,10 @@ Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_4.6-6.tar.gz
-Requires:         R-stats R-RColorBrewer R-MASS
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex
-BuildRequires:    R-stats R-RColorBrewer R-MASS
+Requires:         R-stats 
+Requires:         R-RColorBrewer R-MASS 
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-stats
+BuildRequires:    R-RColorBrewer R-MASS 
 
 %description
 Classification and regression based on a forest of trees using random
@@ -27,8 +28,8 @@ mkdir -p %{buildroot}%{rlibdir}
 test -d %{packname}/src && (cd %{packname}/src; rm -f *.o *.so)
 rm -f %{buildroot}%{rlibdir}/R.css
 
-%check
-%{_bindir}/R CMD check %{packname}
+#%check
+#%{_bindir}/R CMD check %{packname}
 
 %files
 %dir %{rlibdir}/%{packname}
@@ -43,3 +44,11 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %{rlibdir}/%{packname}/data
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/libs
+
+
+%changelog
+* Thu Feb 16 2012 Paulo Andrade <pcpa@mandriva.com.br> 4.6_6-1
++ Revision: 775399
+- Import R-randomForest
+- Import R-randomForest
+
