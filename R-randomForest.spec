@@ -2,13 +2,13 @@
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
-Version:          4.6_6
+Version:          4.6.7
 Release:          1
 Summary:          Breiman and Cutler's random forests for classification and regression
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_4.6-6.tar.gz
+Source0:          http://cran.r-project.org/src/contrib/randomForest_4.6-7.tar.gz
 Requires:         R-stats 
 Requires:         R-RColorBrewer R-MASS 
 BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-stats
@@ -44,11 +44,3 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %{rlibdir}/%{packname}/data
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/libs
-
-
-%changelog
-* Thu Feb 16 2012 Paulo Andrade <pcpa@mandriva.com.br> 4.6_6-1
-+ Revision: 775399
-- Import R-randomForest
-- Import R-randomForest
-
