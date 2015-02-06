@@ -3,7 +3,7 @@
 
 Name:             R-%{packname}
 Version:          4.6.7
-Release:          2
+Release:          3
 Summary:          Breiman and Cutler's random forests for classification and regression
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
